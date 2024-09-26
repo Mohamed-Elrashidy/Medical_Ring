@@ -38,7 +38,7 @@ class MyAppColors{
   static const customColor7 = Color(0xFF221E24);
   static const customColor8 = Color(0xFF221E3C);
   static const primaryVariant = Color(0xFF77319D);
-  static const primary = Color(0xFF247CFF);
+  static const primary = Color(0xFF721DA0);
   static const customColor11 = Color(0xFFFE4236);
   static const customColor12 = Color(0xFFEEEEEE);
   static const lightScaffold= Color(0xFFFCFCFC);
