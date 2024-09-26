@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "807668506387",
+    "project_id": "medical-ring-app-9b2e9",
+    "storage_bucket": "medical-ring-app-9b2e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807668506387:android:fd2c92a2f37b19b46fc4e6",
+        "android_client_info": {
+          "package_name": "com.example.medical_ring_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyActnADtZcUNuOP-hAVtFLt0ywTziu-iwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
