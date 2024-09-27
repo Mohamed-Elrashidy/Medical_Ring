@@ -28,52 +28,21 @@ mixin AppLocale {
   static const String listAllergies = 'listAllergies';
   static const String yes = 'yes';
   static const String no = 'no';
-  static const Map<String, dynamic> EN = {
-    areYouUnderCare:"Are you under the care of a physician, chiropractor, or other healthcare professional for any reason?",
-    areYouTakingMedicine: "Are you taking any medication?",
-    listAllergies:"Please list any allergies",
-    yes : 'Yes',
-    no : 'No',
-
-    previous: 'Previous',
-
-    writeMedicine: 'Write Medicine',
-    writeReason: 'Write Reason',
-    questionnaireStartPageTitle: "Your Health Questionnaire",
-    questionnaireStartPageDescription: "Please answer the following questions to help us understand your health status",
-    profile: 'Profile',
-    personalInformation: 'Personal Information',
-    questionare: 'Questionnaire',
-    account: 'Account',
-    enterYourEmail: 'Enter Your Email',
-    enterYourPassword: 'Enter Your Password',
-    signIn: 'Sign In',
-    getStarted: 'Get Started',
-    next: 'Next',
-    onBoarding1Title: 'Welcome to the App',
-    onBoarding1Description:
-        'This is a description for the first onboarding screen',
-    onBoarding2Title: 'Second Screen',
-    onBoarding2Description:
-        'This is a description for the second onboarding screen',
-    onBoarding3Title: 'Third Screen',
-    onBoarding3Description:
-        'This is a description for the third onboarding screen',
-    onBoarding4Title: 'Fourth Screen',
-    onBoarding4Description:
-        'This is a description for the fourth onboarding screen',
-    onBoarding5Title: 'Fifth Screen',
-    onBoarding5Description:
-        'This is a description for the fifth onboarding screen'
-  };
+  static const String dontHaveEmail = 'dontHaveEmail';
+  static const String signUp = 'signUp';
+  static const String welcomeBack = 'welcomeBack';
+  static const String welcomeDescription = 'welcomeDescription';
   static const Map<String, dynamic> AR = {
+    welcomeDescription: 'مرحبا بك في تطبيقنا، يرجى تسجيل الدخول للمتابعة',
+    welcomeBack: 'مرحبا بك مجددا',
     areYouUnderCare: "هل أنت تحت رعاية طبيب أو معالج طبيعي أو أي أخصائي رعاية صحية لأي سبب؟",
     areYouTakingMedicine: "هل تتناول أي أدوية؟",
     listAllergies: "يرجى ذكر أي حساسية",
     yes: 'نعم',
     no: 'لا',
 
-
+    dontHaveEmail: 'ليس لديك حساب؟ ',
+    signUp: 'سجل الآن',
     previous: 'السابق',
     writeMedicine: 'اكتب الدواء',
     writeReason: 'اكتب السبب',

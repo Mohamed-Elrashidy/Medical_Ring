@@ -34,4 +34,9 @@ class ThemingCubit extends Cubit<ThemeingState> {
   translate(String key) {
     return localization.translate(key);
   }
+
+  isArabic() {
+    return localization.currentLocale!.languageCode == 'ar';
+  }
+
 }
