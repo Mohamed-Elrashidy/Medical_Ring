@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medical_ring_app/core/helpers/extension.dart';
 import 'package:medical_ring_app/core/theming/app_locale.dart';
 import 'package:medical_ring_app/core/theming/my_app_colors.dart';
-import 'package:medical_ring_app/core/theming/text_styles.dart';
 import 'package:medical_ring_app/core/widgets/app_button.dart';
 import 'package:medical_ring_app/core/widgets/my_app_text_field.dart';
 import 'package:medical_ring_app/core/widgets/vertical_space.dart';

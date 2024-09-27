@@ -1,10 +1,13 @@
-import 'package:bloc/bloc.dart';
+
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:medical_ring_app/core/helpers/extension.dart';
-import 'package:medical_ring_app/core/helpers/validators.dart';
 import 'package:medical_ring_app/core/parameters/text_field_parameters.dart';
-import 'package:medical_ring_app/core/theming/app_locale.dart';
-import 'package:meta/meta.dart';
+
+import '../../../../core/helpers/validators.dart';
+import '../../../../core/theming/app_locale.dart';
+
 
 part 'authentication_state.dart';
 

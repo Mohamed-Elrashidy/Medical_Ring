@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:medical_ring_app/core/parameters/text_field_parameters.dart';
 
-import '../parameters/text_field_parameters.dart';
 import '../theming/my_app_colors.dart';
 import '../theming/text_styles.dart';
 import '../theming/theme_colors.dart';
