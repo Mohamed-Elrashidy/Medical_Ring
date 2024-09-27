@@ -25,11 +25,11 @@ class LoginPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const VerticalSpace(height: 100),
-          Text(AppLocale.welcomeBack.translate,
+/*          Text(AppLocale.welcomeBack.translate,
               style: MyAppTextStyle.title.copyWith(color: MyAppColors.primary)),
           const VerticalSpace(height: 8),
           Text(AppLocale.welcomeDescription.translate,
-              style: MyAppTextStyle.normalText),
+              style: MyAppTextStyle.normalText),*/
           MyAppTextField(parameters: authenticationCubit.loginEmail),
           const VerticalSpace(height: 16),
           MyAppTextField(parameters: authenticationCubit.loginPassword),
