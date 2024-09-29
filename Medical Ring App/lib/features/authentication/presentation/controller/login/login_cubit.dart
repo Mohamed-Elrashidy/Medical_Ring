@@ -5,16 +5,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:medical_ring_app/core/helpers/extension.dart';
 import 'package:medical_ring_app/core/parameters/text_field_parameters.dart';
 
-import '../../../../core/helpers/validators.dart';
-import '../../../../core/theming/app_locale.dart';
+import '../../../../../core/helpers/validators.dart';
+import '../../../../../core/theming/app_locale.dart';
 
 
-part 'authentication_state.dart';
 
-class AuthenticationCubit extends Cubit<AuthenticationState> {
-  AuthenticationCubit() : super(AuthenticationInitial());
+part 'login_state.dart';
+
+class LoginCubit extends Cubit<LoginState> {
+  LoginCubit() : super(AuthenticationInitial());
   late TextFieldParameters loginEmail;
   late TextFieldParameters loginPassword;
+
 
   init() {
     loginEmail = TextFieldParameters(

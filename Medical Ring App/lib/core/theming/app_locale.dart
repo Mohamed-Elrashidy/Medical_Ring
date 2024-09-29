@@ -32,7 +32,17 @@ mixin AppLocale {
   static const String signUp = 'signUp';
   static const String welcomeBack = 'welcomeBack';
   static const String welcomeDescription = 'welcomeDescription';
+  static const String confirmPassword = 'confirmPassword';
+  static const String enterYourName = 'enterYourName';
+  static const String enterYourPhone = 'enterYourPhone';
+  static const String signUpPageTitle = 'signUpPageTitle';
+
   static const Map<String, dynamic> AR = {
+    confirmPassword: 'تأكيد كلمة المرور',
+    enterYourName: 'ادخل اسمك',
+    enterYourPhone: 'ادخل رقم هاتفك',
+    signUpPageTitle: 'انشاء حساب',
+
     welcomeDescription: 'مرحبا بك في تطبيقنا، يرجى تسجيل الدخول للمتابعة',
     welcomeBack: 'مرحبا بك مجددا',
     areYouUnderCare: "هل أنت تحت رعاية طبيب أو معالج طبيعي أو أي أخصائي رعاية صحية لأي سبب؟",
@@ -68,4 +78,5 @@ mixin AppLocale {
     onBoarding5Title: 'الشاشة الخامسة',
     onBoarding5Description: 'هذا وصف للشاشة الخامسة'
   };
+
 }
