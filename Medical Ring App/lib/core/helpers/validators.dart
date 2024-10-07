@@ -4,6 +4,7 @@ class Validators {
 
   // Validate email text field
   static String? validateEmail(String? value) {
+    print('validateEmail is $value');
     if (value == null || value.isEmpty) {
       return 'Please enter your email';
     }

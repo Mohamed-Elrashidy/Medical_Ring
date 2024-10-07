@@ -38,11 +38,9 @@ class _MyAppTextFieldState extends State<MyAppTextField> {
     return (widget.parameters.title != null)
         ? Column(
             children: [
-              Text(
-                widget.parameters.title!,
-                style: MyAppTextStyle.secondaryTitle,
-              ),
-              VerticalSpace(height: 16)
+              Text(widget.parameters.title!,
+                  style: MyAppTextStyle.secondaryTitle),
+              const VerticalSpace(height: 16)
             ],
           )
         : Container();
@@ -51,7 +49,6 @@ class _MyAppTextFieldState extends State<MyAppTextField> {
   Widget textFieldSection() {
     return TextFormField(
       maxLines: widget.parameters.maxLines,
-
       focusNode: focusNode,
       onTapOutside: (PointerDownEvent event) {
         focusNode.unfocus();
@@ -63,11 +60,11 @@ class _MyAppTextFieldState extends State<MyAppTextField> {
       decoration: InputDecoration(
         hintText: widget.parameters.hint,
         hintStyle: MyAppTextStyle.hint,
-
         suffixIcon: getSuffixIcon(),
         prefixIcon: getPrefixIcon(),
         filled: true,
-        fillColor: widget.parameters.filledColor??ThemeColors.smallContainer.color,
+        fillColor:
+            widget.parameters.filledColor ?? ThemeColors.smallContainer.color,
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
             borderSide:

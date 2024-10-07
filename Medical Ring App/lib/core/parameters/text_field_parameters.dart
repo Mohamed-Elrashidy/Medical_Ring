@@ -33,7 +33,7 @@ class TextFieldParameters {
     this.onChanged,
     this.maxLines=1,
     this.filledColor,
-    validator,
+    this.validator,
 
   });
 

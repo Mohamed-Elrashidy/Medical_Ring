@@ -32,24 +32,26 @@ class _MedicalRingAppState extends State<MedicalRingApp> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ThemingCubit, ThemeingState>(
-      builder: (context, state) {
-        return ScreenUtilInit(
-          designSize: const Size(393, 852),
-          minTextAdapt: true,
-          splitScreenMode: true,
-          child: MaterialApp(
-            navigatorKey: NavigationService.navigatorKey,
-            locale: BlocProvider.of<ThemingCubit>(context).localization.currentLocale,
-            supportedLocales: BlocProvider.of<ThemingCubit>(context).localization.supportedLocales,
-            localizationsDelegates: BlocProvider.of<ThemingCubit>(context).localization.localizationsDelegates,
-            title: 'Medical Ring App',
-            theme: BlocProvider.of<ThemingCubit>(context).getTheme(),
-             onGenerateRoute: Routing.onGenerateRoute,
-          ),
-
-        );
-
-      });
+    return BlocBuilder<ThemingCubit, ThemeingState>(builder: (context, state) {
+      return ScreenUtilInit(
+        designSize: const Size(393, 852),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        child: MaterialApp(
+          navigatorKey: NavigationService.navigatorKey,
+          locale:
+              BlocProvider.of<ThemingCubit>(context).localization.currentLocale,
+          supportedLocales: BlocProvider.of<ThemingCubit>(context)
+              .localization
+              .supportedLocales,
+          localizationsDelegates: BlocProvider.of<ThemingCubit>(context)
+              .localization
+              .localizationsDelegates,
+          title: 'Medical Ring App',
+          theme: BlocProvider.of<ThemingCubit>(context).getTheme(),
+          onGenerateRoute: Routing.onGenerateRoute,
+        ),
+      );
+    });
   }
 }
