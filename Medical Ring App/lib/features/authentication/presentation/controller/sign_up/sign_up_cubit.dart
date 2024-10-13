@@ -64,6 +64,12 @@ class SignUpCubit extends Cubit<SignUpState> {
     if (result.isRight()) {
       final user =
           result.getOrElse(() => Success()).returnedData as UserCredential;
+      result = await createAccount(userId: user.user!.uid);
+      if (result.isLeft()) {
+        emit(SignUpFailure(result.fold((l) => l.errorMessage, (r) => '')));
+        return;
+      }
+
       emit(SignUpSuccess(user));
       clearTextFields();
     } else {
@@ -72,7 +78,7 @@ class SignUpCubit extends Cubit<SignUpState> {
   }
 
   /************************** FUNCTION TO CLEAR TEXT FIELDS **************************/
-  clearTextFields(){
+  clearTextFields() {
     signUpEmail.controller.clear();
     signUpPassword.controller.clear();
     signUpConfirmPassword.controller.clear();
@@ -80,4 +86,14 @@ class SignUpCubit extends Cubit<SignUpState> {
     signUpPhone.controller.clear();
   }
 
+  /************************** CREATE ACCOUNT FUNCTION **************************/
+
+  createAccount({required String userId}) async {
+    return await repository.createAccount(
+      userId: userId,
+      email: signUpEmail.controller.text,
+      name: signUpName.controller.text,
+      phoneNumber: signUpPhone.controller.text,
+    );
+  }
 }

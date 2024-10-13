@@ -1,12 +1,14 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:medical_ring_app/core/error_handling/Failure.dart';
 import 'package:medical_ring_app/core/error_handling/error_handler.dart';
 import 'package:medical_ring_app/core/error_handling/firebase_failure.dart';
 import 'package:medical_ring_app/core/error_handling/success.dart';
 
 class FirebaseRepository {
- static  Future<Either<Failure, Success>> signUpWithEmailAndPassword(
+  static Future<Either<Failure, Success>> signUpWithEmailAndPassword(
       {required String email, required String password}) async {
     Either<FirebaseFailure, Success> result;
     print("entred sign up");
@@ -22,15 +24,37 @@ class FirebaseRepository {
     return result;
   }
 
- static Future<Either<Failure, Success>> signInWithEmailAndPassword(
+  static Future<Either<Failure, Success>> signInWithEmailAndPassword(
       {required String email, required String password}) async {
-   print("entred sign in");
+    print("entred sign in");
     Either<FirebaseFailure, Success> result;
     try {
       final userCredential = await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
       print("user signed in");
       result = Right(Success<UserCredential>(returnedData: userCredential));
+    } catch (e) {
+      print("error ${e.toString()}");
+      result = Left(ErrorHandler.handleFirebaseError(e));
+    }
+    return result;
+  }
+
+  static addDocumentWithId(
+      {required String collection,
+      required String documentId,
+      required Map<String, dynamic> data}) async {
+    Either<Failure, Success> result;
+    try {
+      FirebaseAuth.instance.currentUser!.uid;
+      debugPrint("current user id ${FirebaseAuth.instance.currentUser!.uid}");
+
+      await FirebaseFirestore.instance
+          .collection(collection)
+          .doc(documentId)
+          .set(data, SetOptions(merge: true));
+
+      result = Right(Success());
     } catch (e) {
       print("error ${e.toString()}");
       result = Left(ErrorHandler.handleFirebaseError(e));
