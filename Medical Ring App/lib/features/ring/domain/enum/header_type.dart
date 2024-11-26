@@ -1,0 +1,4 @@
+enum HeaderType{
+  text,
+  icon;
+}

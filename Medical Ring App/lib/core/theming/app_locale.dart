@@ -11,15 +11,17 @@ mixin AppLocale {
   static const String onBoarding5Description = 'onBoarding5Description';
   static const String next = 'next';
   static const String signIn = 'signIn';
-  static const String getStarted= 'getStarted';
+  static const String getStarted = 'getStarted';
   static const String enterYourEmail = 'enterYourEmail';
   static const String enterYourPassword = 'enterYourPassword';
   static const String account = 'account';
   static const String questionare = 'questionare';
   static const String profile = 'profile';
   static const String personalInformation = 'personalInformation';
-  static const String questionnaireStartPageTitle = 'questionnaireStartPageTitle';
-  static const String questionnaireStartPageDescription = 'questionnaireStartPageDescription';
+  static const String questionnaireStartPageTitle =
+      'questionnaireStartPageTitle';
+  static const String questionnaireStartPageDescription =
+      'questionnaireStartPageDescription';
   static const String writeReason = 'writeReason';
   static const String writeMedicine = 'writeMedicine';
   static const String previous = 'previous';
@@ -36,28 +38,49 @@ mixin AppLocale {
   static const String enterYourName = 'enterYourName';
   static const String enterYourPhone = 'enterYourPhone';
   static const String signUpPageTitle = 'signUpPageTitle';
-
+  static const String welcome = 'welcome';
+  static const String hr = 'hr';
+  static const String addDevice = 'addDevice';
+  static const String deviceNumber = 'deviceNumber';
+  static const String userName = 'userName';
+  static const String currentValues = 'currentValues';
+  static const String high = 'high';
+  static const String normal = 'normal';
+  static const String low = 'low';
+  static const String previousValues = 'previousValues';
+  static const String more = 'more';
   static const Map<String, dynamic> AR = {
+    more: 'المزيد',
+    previousValues: 'القيم السابقة',
+    high: 'عالي',
+    normal: 'طبيعي',
+    low: 'منخفض',
+    currentValues: 'القيم الحالية',
+    userName: 'اسم المستخدم',
+    deviceNumber: "رقم الجهاز",
+    addDevice : 'إضافة جهاز',
+    hr: '.H.R',
     confirmPassword: 'تأكيد كلمة المرور',
     enterYourName: 'ادخل اسمك',
     enterYourPhone: 'ادخل رقم هاتفك',
     signUpPageTitle: 'انشاء حساب',
-
     welcomeDescription: 'مرحبا بك في تطبيقنا، يرجى تسجيل الدخول للمتابعة',
     welcomeBack: 'مرحبا بك مجددا',
-    areYouUnderCare: "هل أنت تحت رعاية طبيب أو معالج طبيعي أو أي أخصائي رعاية صحية لأي سبب؟",
+    areYouUnderCare:
+        "هل أنت تحت رعاية طبيب أو معالج طبيعي أو أي أخصائي رعاية صحية لأي سبب؟",
     areYouTakingMedicine: "هل تتناول أي أدوية؟",
     listAllergies: "يرجى ذكر أي حساسية",
     yes: 'نعم',
     no: 'لا',
-
+    welcome: 'مرحبا',
     dontHaveEmail: 'ليس لديك حساب؟ ',
     signUp: 'سجل الآن',
     previous: 'السابق',
     writeMedicine: 'اكتب الدواء',
     writeReason: 'اكتب السبب',
     questionnaireStartPageTitle: "استبيان الصحة الخاص بك",
-    questionnaireStartPageDescription: "يرجى الإجابة على الأسئلة التالية لمساعدتنا في فهم حالتك الصحية",
+    questionnaireStartPageDescription:
+        "يرجى الإجابة على الأسئلة التالية لمساعدتنا في فهم حالتك الصحية",
     profile: 'الملف الشخصي',
     personalInformation: 'المعلومات الشخصية',
     questionare: 'الاستبيان',
@@ -78,5 +101,7 @@ mixin AppLocale {
     onBoarding5Title: 'الشاشة الخامسة',
     onBoarding5Description: 'هذا وصف للشاشة الخامسة'
   };
+
+
 
 }

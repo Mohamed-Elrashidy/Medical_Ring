@@ -13,10 +13,11 @@ class HomeCubit extends Cubit<HomeState> {
   }
 
   getUserData() {
-    emit(HomeLoading());
+  //  emit(HomeLoading());
+
   }
 
   getHomePageData() {
-    emit(HomeLoading());
+  //  emit(HomeLoading());
   }
 }

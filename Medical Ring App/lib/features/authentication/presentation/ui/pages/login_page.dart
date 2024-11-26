@@ -91,6 +91,7 @@ class _BuildSignInForm extends StatelessWidget {
                 const VerticalSpace(height: 32),
                 AppButton(
                     onTap: () {
+                      context.pushNamed(Routes.homePage);
                       if (cubit.formKey.currentState!.validate()) {
                         // Trigger form validation
                         cubit.login(); // Proceed if validation is successful

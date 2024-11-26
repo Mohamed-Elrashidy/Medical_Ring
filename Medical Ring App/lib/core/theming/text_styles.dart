@@ -6,7 +6,7 @@ import 'theme_colors.dart';
 class MyAppTextStyle {
   static TextStyle title = TextStyle(
     fontSize: 24.sp,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w700,
     color: ThemeColors.textBlackWhite.color,
   );
   static TextStyle secondaryTitle = TextStyle(

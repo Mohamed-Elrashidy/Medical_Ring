@@ -9,7 +9,7 @@ class MyAppColors{
   static const white = Color(0xFFFFFFFF);
   static const grey = Color(0xFF9E9E9E);
   static const greyVariant = Color(0xFF757575);
-  static const greyLight = Color(0xFFE0E0E0);
+  static const greyLight = Color(0xFFF2F2F2);
   static const greyLightVariant = Color(0xFFBDBDBD);
   static const error = Color(0xFFB00020);
   static const errorVariant = Color(0xFFFF5252);
