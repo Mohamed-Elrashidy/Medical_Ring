@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:medical_ring_app/core/theming/text_styles.dart';
 import 'package:medical_ring_app/features/ring/domain/entity/ring_data_entity.dart';
 import 'package:medical_ring_app/features/ring/utils/dummy_data.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
@@ -13,16 +16,26 @@ class RingReadingsTable extends StatelessWidget {
   Widget build(BuildContext context) {
     return SfDataGrid(
       headerGridLinesVisibility: GridLinesVisibility.horizontal,
-       gridLinesVisibility: GridLinesVisibility.horizontal,
-     // allowColumnsResizing: true,
+      gridLinesVisibility: GridLinesVisibility.horizontal,
+      // allowColumnsResizing: true,
       source: RingDataSource(ringDataEntity: DummyData.ringDataEntity),
       columns: [
         for (var item in Constants.ringTableHeaderData)
           GridColumn(
               width: 45,
               columnName: item.id,
-              label:
-                  item.type == HeaderType.text ? Text(item.text!) : Text("--"))
+              label: item.type == HeaderType.text
+                  ? Text(item.text!)
+                  : Column(
+                    children: [
+                      SvgPicture.asset(
+                          item.icon!,
+                          fit: BoxFit.contain,
+                          width: 16.w,
+                          height: 16.h,
+                        ),
+                    ],
+                  ))
       ],
     );
   }

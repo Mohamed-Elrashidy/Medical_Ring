@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:medical_ring_app/features/account/data/model/account_model.dart';
 
 import '../../../../core/constants/api_constants.dart';
@@ -22,6 +23,7 @@ class AuthenticationRemoteDataSource {
   createAccount(
       {required String userId,
       required UserAccountModel userAccountModel}) async {
+    debugPrint("create remote data sourc");
     return await FirebaseRepository.addDocumentWithId(
         collection: ApiConstants.usersCollection,
         documentId: userId,

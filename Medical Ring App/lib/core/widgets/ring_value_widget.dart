@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:medical_ring_app/core/enums/size_enum.dart';
 import 'package:medical_ring_app/core/theming/my_app_colors.dart';
 import 'package:medical_ring_app/core/theming/text_styles.dart';
@@ -34,7 +35,11 @@ class RingValueWidget extends StatelessWidget {
             title,
             style: MyAppTextStyle.heading3,
           ),
-          const Icon(Icons.ac_unit),
+          SvgPicture.asset(
+            iconPath,
+            width: 30.w,
+            height: 30.h,
+          ),
           Text(
             value,
             style: MyAppTextStyle.heading3,

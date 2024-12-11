@@ -36,14 +36,15 @@ class RingOverviewWidget extends StatelessWidget {
                     size: SizeEnum.small,
                     title: AppLocale.hr.translate,
                     value: 70.toString(),
-                    iconPath: "assets/icons/heart.svg"),
+                    iconPath: "assets/svg_images/heart.svg"),
                 RingValueWidget(
                     size: SizeEnum.small,
                     title: AppLocale.hr.translate,
                     value: 70.toString(),
-                    iconPath: "assets/icons/heart.svg"),
+                    iconPath: "assets/svg_images/steps.svg"),
               ],
             ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -51,12 +52,12 @@ class RingOverviewWidget extends StatelessWidget {
                     size: SizeEnum.small,
                     title: AppLocale.hr.translate,
                     value: 70.toString(),
-                    iconPath: "assets/icons/heart.svg"),
+                    iconPath: "assets/svg_images/oxygen.svg"),
                 RingValueWidget(
                     size: SizeEnum.small,
                     title: AppLocale.hr.translate,
                     value: 70.toString(),
-                    iconPath: "assets/icons/heart.svg"),
+                    iconPath: "assets/svg_images/temp.svg"),
               ],
             ),
           ],
